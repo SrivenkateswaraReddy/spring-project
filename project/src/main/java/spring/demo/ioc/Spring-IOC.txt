@@ -34,4 +34,12 @@ dependency interface and class
 create a constructor in you class for injections
 configure the dependency injection in spring config file.
 
+Setter injection
+inject dependency by calling setter methods on the class
 
+create setter methods in your class files for injections
+configure the dependency injection in spring config file
+
+Injecting literal values
+Create setter methods in your class files for injections
+configure the dependency injection in spring config file

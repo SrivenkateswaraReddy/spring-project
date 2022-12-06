@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
 <!-- define the dependency -->
     <bean id="myfortune" class="spring.demo.ioc.HappyFortuneService"/>
+
+    <context:property-placeholder location="details.yml"/>
 
     <bean id="trackcoach" class="spring.demo.ioc.TrackCoach">
     <constructor-arg ref="myfortune"/>
@@ -15,5 +18,11 @@
     </bean>
     <bean id="cricketcoach" class="spring.demo.ioc.CricketCoach">
         <constructor-arg ref="myfortune"/>
+    </bean>
+
+    <bean id="tenniscoach" class="spring.demo.ioc.TennisCoach">
+       <property name="fortuneService" ref="myfortune"/>
+        <property name="playerName" value="${foo.player}" />
+        <property name="noOfGrandSlams" value="${foo.Slams}"/>
     </bean>
 </beans>
