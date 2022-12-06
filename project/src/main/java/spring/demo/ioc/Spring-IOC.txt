@@ -1,0 +1,37 @@
+Spring Inversion of Control
+It is a technique to achieve the loose coupling between objects and dependencies (IOC)
+Inject objects and dependencies (Dependency Injection)
+
+we-will be using XML configuration
+1 configure spring beans
+2 Create Spring container
+Specialized implementations
+            ####
+Class PathXmlApplicationContext
+AnnotationConfigApplicationContext
+GenericWebApplicationContext
+etc
+3. Retreving the values from container
+
+
+What is Spring Bean?
+A Spring Bean is a simple Java object.
+
+when java objects are created by spring container then Spring refers them as Spring Beans
+
+Spring beans are created from normal java classes just like java Objects.
+
+
+what is dependency injection?
+spring container injects objects into other objects or dependencies provides loose coupling and provides easy access to spring Ioc.
+
+two injection types
+Constructor injection
+Setter injection
+auto-wiring
+
+dependency interface and class
+create a constructor in you class for injections
+configure the dependency injection in spring config file.
+
+
