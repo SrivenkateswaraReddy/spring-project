@@ -8,6 +8,8 @@
 <!-- define the dependency -->
     <bean id="myfortune" class="spring.demo.ioc.HappyFortuneService"/>
 
+    <bean id="randomFortune" class="spring.demo.ioc.RandomFortuneService" />
+
     <context:property-placeholder location="details.yml"/>
 
     <bean id="trackcoach" class="spring.demo.ioc.TrackCoach">
@@ -18,6 +20,7 @@
     </bean>
     <bean id="cricketcoach" class="spring.demo.ioc.CricketCoach">
         <constructor-arg ref="myfortune"/>
+        <constructor-arg ref="randomFortune"/>
     </bean>
 
     <bean id="tenniscoach" class="spring.demo.ioc.TennisCoach">
@@ -25,4 +28,5 @@
         <property name="playerName" value="${foo.player}" />
         <property name="noOfGrandSlams" value="${foo.Slams}"/>
     </bean>
+
 </beans>

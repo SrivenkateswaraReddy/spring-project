@@ -4,7 +4,13 @@ public class CricketCoach implements Coach{
 
     private FortuneService fortuneService;
 
+    private RandomFortuneService randomFortuneService;
+
     public CricketCoach() {
+    }
+
+    public CricketCoach(RandomFortuneService randomFortuneService) {
+        this.randomFortuneService = randomFortuneService;
     }
 
     public CricketCoach(FortuneService fortuneService) {
@@ -19,5 +25,9 @@ public class CricketCoach implements Coach{
     @Override
     public String getDailyFortune() {
         return "dependency-injection from CricketCoach "+ fortuneService.getFortuneService();
+    }
+
+    public String getRandomFortunes() {
+        return "getting from happyFortuneService "+ randomFortuneService.getFortuneService() ;
     }
 }

@@ -43,3 +43,14 @@ configure the dependency injection in spring config file
 Injecting literal values
 Create setter methods in your class files for injections
 configure the dependency injection in spring config file
+
+
+Scope of beans
+
+What is Singleton?
+Spring Container creates only one instance of the bean, by default
+
+it will be in the cache memory
+
+All requests for the bean
+will be shared reference to the Same Bean.
